@@ -2,9 +2,13 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Service;
+use App\Form\ServiceFormType;
+use Symfony\Component\HttpFoundation\Request;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MenuController extends AbstractController
 {
@@ -63,6 +67,24 @@ class MenuController extends AbstractController
         ];
         return $this->render('menu/contact.html.twig', [
             'menuItem' => $menuItems,
+        ]);
+    }
+
+    #[Route('/new/service', name: 'newService')]
+    public function newService(Request $request): Response
+    {
+        $service= new Service();
+        $form=$this->createForm(ServiceFormType::class, $service);
+        $form->handleRequest($request);
+        $menuItems= [
+            ['label'=>'Accueil', 'route'=>'menu'],
+            ['label'=>'A propos', 'route'=>'propos'],
+            ['label'=>'Services', 'route'=>'services'],
+            ['label'=>'Contact', 'route'=>'contact']
+        ];
+        return $this->render('new_service/index.html.twig', [
+            'menuItem' => $menuItems,
+            'form' =>$form->createView()
         ]);
     }
 
