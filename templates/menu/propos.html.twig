@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MenuController!{% endblock %}
+
+{% block body %}
+    <section id="about" class="about-mf sect-pt4 route mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="{{asset('assets/images/bms.png')}}" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Nom: </span> <span>Bamos Guinley</span></p>
+                        <p><span class="title-s">Profile: </span> <span>Developper web</span></p>
+                        <p><span class="title-s">Email: </span> <span>guinleyb@gmail.com</span></p>
+                        <p><span class="title-s">Telephone: </span> <span>(229) 948-429-94</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Compétences</p>
+                    <span>HTML</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>CSS3</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>PHP</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>JAVASCRIPT</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                     <span>Bootstrap</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        A propos de moi
+                      </h5>
+                    </div>
+                    <p class="lead">
+                        Je suis Bammos Guinley, actuellement étudiant en deuxième année de système informatique et logiciel.
+                        Ma passion pour la technologie m'a conduit a me lancer dans ce domaine en abordant de façon proactive
+                        les défis liés à la conception et au développement de systèmes informatiques.Mon parcours acad"émique est 
+                        ancré dans la maitrise des concepts fondamentaux de l'informatique, avec une focalisation particulière sur 
+                        le développement web.
+                    </p>
+                    <p class="lead">
+                        En tant que développeur web passionné, je m'efforce d'atteindre l'excelence en resolvant efficacement des problèmes
+                        liés au développement web.Mon engagement constant dans l'apprentissage des dernières technologies reflète ma volonté
+                        de rester à la pointe de l'industrie.
+                    </p>
+                    <p class="lead">
+                        Mon parcours académique et ma passion pour le développement web convergent pour forger un profesionnel en devenir,
+                        prêt à relever de noouveaux défis et à laisser une empreinte possitive dans le paysage dynamique de la technologie.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section
+{% endblock %}
